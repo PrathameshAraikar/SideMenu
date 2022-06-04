@@ -22,12 +22,16 @@ struct SideMenuView: View {
                     .frame(height: 180)
                 
                // Options
-                ForEach(0..<5) { _ in
-                    SideMenuOptions()
-                        .foregroundColor(.white)
-                        .padding(.bottom)
+                ForEach(SideMenuViewModel.allCases, id: \.self) { option in
+                    NavigationLink {
+                        Text(option.title)
+                    } label: {
+                        SideMenuOptions(viewModel: option)
+                            .foregroundColor(.white)
+                            .padding(.bottom)
+                    }
+
                 }
-                
                 Spacer()
             }
             .navigationBarHidden(true)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F4AE264284BAEEF007A6B15 /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4AE263284BAEEF007A6B15 /* SideMenuViewModel.swift */; };
 		4F50FACB284B628800F3CFE1 /* SideMenuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F50FACA284B628800F3CFE1 /* SideMenuApp.swift */; };
 		4F50FACD284B628800F3CFE1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F50FACC284B628800F3CFE1 /* ContentView.swift */; };
 		4F50FACF284B628A00F3CFE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F50FACE284B628A00F3CFE1 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F4AE263284BAEEF007A6B15 /* SideMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
 		4F50FAC7284B628800F3CFE1 /* SideMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SideMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F50FACA284B628800F3CFE1 /* SideMenuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuApp.swift; sourceTree = "<group>"; };
 		4F50FACC284B628800F3CFE1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				4F50FAD8284B662600F3CFE1 /* SideMenuView.swift */,
 				4F50FADA284B664300F3CFE1 /* SideMenuHeader.swift */,
 				4F50FADC284B665300F3CFE1 /* SideMenuOptions.swift */,
+				4F4AE263284BAEEF007A6B15 /* SideMenuViewModel.swift */,
 			);
 			path = SideMenu;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 				4F50FACD284B628800F3CFE1 /* ContentView.swift in Sources */,
 				4F50FADB284B664300F3CFE1 /* SideMenuHeader.swift in Sources */,
 				4F50FADD284B665300F3CFE1 /* SideMenuOptions.swift in Sources */,
+				4F4AE264284BAEEF007A6B15 /* SideMenuViewModel.swift in Sources */,
 				4F50FACB284B628800F3CFE1 /* SideMenuApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

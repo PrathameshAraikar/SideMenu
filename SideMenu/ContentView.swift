@@ -36,6 +36,9 @@ struct ContentView: View {
                     }
                     .navigationTitle("Home")
             }
+//            .onAppear {
+//                isShowingMenu = false
+//            }
         }
     }
 }
