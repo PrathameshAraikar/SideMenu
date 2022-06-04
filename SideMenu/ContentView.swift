@@ -9,8 +9,25 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            ZStack {
+                Color.white.ignoresSafeArea()
+                
+                Text("Hello, world!")
+                    .padding()
+            }
+            .navigationTitle("Home")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "line.3.horizontal")
+                    }
+
+                }
+            }
+        }
     }
 }
 
