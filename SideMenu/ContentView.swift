@@ -8,24 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var isShowingMenu: Bool = false
+    
     var body: some View {
         NavigationView {
             ZStack {
-                Color.white.ignoresSafeArea()
-                
-                Text("Hello, world!")
-                    .padding()
-            }
-            .navigationTitle("Home")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
-                        
-                    } label: {
-                        Image(systemName: "line.3.horizontal")
-                    }
-
+                if isShowingMenu {
+                    SideMenuView(isShowingMenu: $isShowingMenu)
                 }
+                HomeView()
+                    .cornerRadius(isShowingMenu ? 25 : 10)
+                    .offset(
+                        x: isShowingMenu ? 300 : 0,
+                        y: isShowingMenu ? 44 : 0)
+                    .scaleEffect(isShowingMenu ? 0.8 : 1)
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarLeading) {
+                            Button {
+                                withAnimation(.spring()) {
+                                    isShowingMenu.toggle()
+                                }
+                            } label: {
+                                Image(systemName: "line.3.horizontal")
+                            }
+                        }
+                    }
+                    .navigationTitle("Home")
             }
         }
     }
@@ -34,5 +43,16 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct HomeView: View {
+    var body: some View {
+        ZStack {
+            Color.white.ignoresSafeArea()
+            
+            Text("Hello, world!")
+                .padding()
+        }
     }
 }
