@@ -18,7 +18,7 @@ struct ContentView: View {
                     SideMenuView(isShowingMenu: $isShowingMenu)
                 }
                 HomeView()
-                    .cornerRadius(isShowingMenu ? 25 : 10)
+                    .cornerRadius(isShowingMenu ? 25 : 0)
                     .offset(
                         x: isShowingMenu ? 300 : 0,
                         y: isShowingMenu ? 44 : 0)
@@ -36,9 +36,6 @@ struct ContentView: View {
                     }
                     .navigationTitle("Home")
             }
-//            .onAppear {
-//                isShowingMenu = false
-//            }
         }
     }
 }
@@ -46,6 +43,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.light)
     }
 }
 
@@ -53,7 +51,11 @@ struct HomeView: View {
     var body: some View {
         ZStack {
             Color.white.ignoresSafeArea()
-            
+            //            if preferredColorScheme(.light) as! Bool {
+            //                Color.white.ignoresSafeArea()
+            //            } else {
+            //                Color.black.ignoresSafeArea()
+            //            }
             Text("Hello, world!")
                 .padding()
         }
